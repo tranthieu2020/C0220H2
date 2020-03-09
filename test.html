@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Biểu mẫu</title>
+    <style>
+        #myForm{
+            display: none;
+        }
+
+    </style>
+    <script>
+        function showForm(){
+            document.getElementById("myForm").style.display = "block";
+
+        }
+        function closeForm(){
+            document.getElementById("myForm").style.display = "none";
+
+        }
+    </script>
+</head>
+<body>
+<form action="#">
+    <table>
+        <h2>Đăng nhập</h2>
+        <table>
+            <tr>
+                <td>Tài khoản</td>
+                <td><input type="text" name="account" value="admin"></td>
+            </tr>
+            <tr>
+                <td>Mật khẩu</td>
+                <td><input type="password" name="password" value="admin"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></t><button onclick="showForm()">Đăng nhập</button></td>
+            </tr>
+        </table>
+</form>
+<form action="#" id="myForm">
+    <h2>Thông tin hàng hóa</h2>
+    <table>
+        <tr>
+            <td>Tên hàng hóa:</td>
+            <td><input type="text" name="Tên hàng hóa"></td>
+        </tr>
+        <tr>
+            <td>Mô tả hàng hóa</td>
+            <td><textarea cols="50" rows="5">Mô tả hàng hóa</textarea></td>
+        </tr>
+        <tr>
+            <td>Ảnh hàng hóa:</td>
+            <td><input type="file" name="picture"></td>
+        </tr>
+        <tr>
+            <td>Số lượng:</td>
+            <td><input type="text" name="Số lượng"></td>
+        </tr>
+        <tr>
+            <td>Giá nhập:</td>
+            <td><input type="text" name="Giá nhập"></td>
+        </tr>
+        <tr>
+            <td>Ngày nhập:</td>
+            <td><input type="date" name="date"></td>
+        </tr>
+        <tr>
+            <td>Người nhập:</td>
+            <td>
+                <input type="radio" name="Người nhập" value="nguoinhap">Nguyễn Văn A
+                <input type="radio" name="Người nhập" value="nguoinhap">Trần Văn B
+                <input type="radio" name="Người nhập" value="nguoinhap">Đào Thị C
+                <input type="radio" name="Người nhập" value="nguoinhap">Lương Văn D
+            </td>
+        <tr>
+            <td>Nơi nhập:</td>
+            <td><select name="Công ty">
+                <option value="cty A">Công ty A</option>
+                <option value="cty B">Công ty B</option>
+                <option value="cty C">Công ty C</option>
+                <option value="cty D">Công ty D</option>
+            </select>
+            </td>
+        <tr>
+            <td>Loại hàng hóa:</td>
+            <td>
+                <input type="checkbox" name="Loại hàng hóa" value="loaihanghoa">Máy tính
+                <input type="checkbox" name="Loại hàng hóa" value="loaihanghoa">Máy in
+                <input type="checkbox" name="Loại hàng hóa" value="loaihanghoa">Camera
+            </td>
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" value="Send Data" on>
+                <input type="reset" value="Reset">
+                <input type="button" value="Đóng" onclick="closeForm()">
+            </td>
+    </table>
+</form>
+<script>
+
+</script>
+</body>
+</html>
