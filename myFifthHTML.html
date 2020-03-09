@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        function giaiPT(){
+            let a,b;
+            a = prompt("Nhập a:");
+            a = Number.parseFloat(a);
+
+            b = prompt("Nhập b:");
+            b = Number.parseFloat(b);
+
+            if(a == 0)
+                if(b==0)
+                    alert("Phương trình vô số nghiệm")
+                else
+                    alert("Phương trình vô nghiệm")
+            else
+                alert("Phương trình có nghiệm x = " + -b/a);
+        }
+
+        function kiemTraSo()
+        {
+            let n;
+            n = prompt("Nhập một số nguyên:");
+            n = Number.parseInt(n);
+
+            if(n > 9999)
+                    alert("Số được nhập không hợp lệ")
+            else
+                if(n < 0)
+                    alert(n + " là số âm")
+                else{
+                    alert(n + " là số dương");
+                    if(n <= 9)
+                        alert( n + " có 1 chữ số")
+                    else
+                        if(n <= 99)
+                            alert( n + " có 2 chữ số")
+                        else
+                            if(n <= 999)
+                                alert( n + " có 3 chữ số")
+                            else
+                                    alert( n + " có 4 chữ số");
+            }
+
+
+        }
+
+    </script>
+
+</head>
+<body>
+<button onclick="giaiPT()">Giải phương trình</button>
+<button onclick="kiemTraSo()">Kiểm tra số được nhập</button>
+
+
+</body>
+</html>

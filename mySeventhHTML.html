@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function tinhSoNgay(){
+            let thang = prompt("Nhập tháng:");
+            thang = Number.parseInt(thang);
+            let nam = prompt("Nhập năm:")
+            nam = Number.parseInt(nam);
+
+            alert("Tháng " + thang + "/" + nam + " có " + tinhNgay(thang, nam) + " ngày.");
+        }
+
+        function tinhNgay(thang, nam){
+            switch(thang){
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12: return 31;
+                case 4:
+                case 6:
+                case 9:
+                case 11: return 30;
+                case 2: if(kiemTraNamNhuan(nam))
+                            return 29;
+                        else
+                            return 28;
+                default: return "Không phải là tháng hơp lệ";
+            }
+
+
+        }
+        // Năm nhuân là những năm chia hết cho 400 hoặc chia hết cho 4 nhưng không chia hết cho 100
+        function kiemTraNamNhuan(nam)
+        {
+                return (nam % 400 == 0) || (nam % 4 == 0  && nam % 100 != 0);
+         /*
+                if((nam % 400 == 0) || (nam % 4 == 0  && nam % 100 != 0))
+                    return true;
+                else
+                    return false;
+          */
+        }
+
+
+
+    </script>
+</head>
+<body>
+<!-- NHập tháng và năm rồi cho biết tháng đó có bao nhiêu ngày -->
+<button onclick="tinhSoNgay()"> Nhập tháng</button>
+</body>
+</html>
