@@ -4,6 +4,19 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script>
+        /*
+    1/Nhập hai giá trị tháng của cùng một năm. VD: 2/2020 và 10/2020.
+    Tính số ngày giữa hai tháng  năm này. VD: 29+31+30+31+30+31+31+30+31 = 273
+
+    2/Nhập hai giá trị tháng năm. VD: 2/2020 và 10/2021.
+    Tính số ngày giữa hai tháng năm này.
+
+    3/Nhập hai giá trị ngày tháng bất kỳ. VD: 04/02/2020 và 02/10/2022.
+    Tính số ngày giữa hai ngày này.
+
+    4/Tính tích phân của hàm số f(x) = e^x + x^2 +2 trong đoạn [0, 2].
+
+    */
         function tinhSoNgay(){
             let thang = prompt("Nhập tháng:");
             thang = Number.parseInt(thang);
@@ -13,6 +26,24 @@
             alert("Tháng " + thang + "/" + nam + " có " + tinhNgay(thang, nam) + " ngày.");
         }
 
+
+        function tinhSoNgayGiuaCacThang(){
+            let thangDau = prompt("Nhập tháng đầu:");
+            thangDau = Number.parseInt(thangDau);
+
+            let thangCuoi = prompt("Nhập tháng cuối:");
+            thangCuoi = Number.parseInt(thangCuoi);
+
+            let nam = prompt("Nhập năm:");
+            nam = Number.parseInt(nam);
+
+            let i, sum = 0;
+
+            for(i = thangDau; i <= thangCuoi; i++ )
+                sum += tinhNgay(i, nam);
+            alert("Tổng số ngày là: " + sum );
+
+        }
         function tinhNgay(thang, nam){
             switch(thang){
                 case 1:
@@ -54,5 +85,7 @@
 <body>
 <!-- NHập tháng và năm rồi cho biết tháng đó có bao nhiêu ngày -->
 <button onclick="tinhSoNgay()"> Nhập tháng</button>
+<button onclick="tinhSoNgayGiuaCacThang()">Tính số ngày giữa các tháng </button>
+
 </body>
 </html>
