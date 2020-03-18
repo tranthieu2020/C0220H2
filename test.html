@@ -4,37 +4,43 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script>
-        function tinh() {
-            let thangX = Number.parseInt(prompt("nhập tháng thứ  1"));
-            let thangY = Number.parseInt(prompt("nhập tháng thứ  2"));
-            let s = 0 ;
-            for (let i = thangX; i <= 12 , i <=thangY; i++) {
-                s+= so_ngay1thang(i)
-            }
-            alert(s)
+        /*
+        Nhập số phân tử  của mảng.
+        Sinh ngẫu nhiên mảng
+        Tính tổng các phần tử của mảng
+
+
+        Bài tập:
+        1/ Tính tổng các số chẵn, số lẻ, số chính phương, số nguyên tố của mảng.
+        2/ Sắp xếp mảng theo thứ tự tăng dần.
+        3/** Sắp xếp mảng sao cho các số lẻ tăng dần và các số chẵn giảm dần.
+
+
+
+        /*---------------main----------*/
+        let myArray = [];
+        myArray["ABC"] = "XYZ";
+        alert(myArray.join());
+        initArray();
+        showArray();
+        console.log("Tổng là: " + calsum());
+        /*--------utility functions ---------*/
+        function initArray(){
+            let count = +prompt("Nhập số phần tử của mảng");
+            for(let i = 0; i< count; i++)
+                myArray.push(Math.round(1000*Math.random()));
         }
-        function so_ngay1thang(thang) {
-            switch (thang) {
-                case 1:
-                case 3:
-                case 5:
-                case 7:
-                case 8:
-                case 10:
-                case 12:
-                    return 31; break;
-                case 4:
-                case 6:
-                case 9:
-                case 11:
-                    return 30; break;
-                case 2:
-                    return 28 || 29;
-            }
+        function showArray(){
+            for(let i = 0; i< myArray.length; i++)
+                console.log(myArray[i]);
+        }
+        function calsum() {
+            let sum = 0;
+            for(let i = 0; i< myArray.length; i++)
+                sum += myArray[i];
+            return sum;
         }
     </script>
 </head>
 <body>
-<button onclick="tinh()">nhập tháng</button>
 </body>
-</html>

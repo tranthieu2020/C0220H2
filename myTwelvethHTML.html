@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tổng các chữ số</title>
+    <script>
+    /* Nhập một số nguyên dương. Tính tổng các chữ số của nó.
+
+
+
+
+    /*
+      Kiểm tra:
+             Nhập một số nguyên dương. Tính tổng các chữ số chẵn của nó
+    */
+
+
+
+
+
+        VD: n = 123 => Kết quả: 6
+        VD: 123456789 => Kết quả: 45
+
+
+        n = 123
+        sum = 0;
+
+        while(n > 0):
+            du = 1 % 10  //( = 1)
+            sum += du  // 6
+            n /= 10;   // 0
+
+        sum = 6
+    */
+
+    function sumDigits(n){
+        let sum = 0;
+
+
+        for(;;)
+        {
+            break;
+        }
+
+        //while(n > 0){
+        while(true){
+            if(n<=0)
+                break;
+
+            let du = n % 10;
+
+            //if(du % 2 == 0)
+            //    sum += n % 10;
+            n = Math.floor(n/10);
+
+            if(du % 2 != 0)
+                continue;
+
+            sum += du;
+        }
+        return sum;
+    }
+
+    function tinhTong(){
+        let n = +prompt("Nhập số nguyên dương:");
+        alert("Tổng các chữ số là: " + sumDigits(n));
+    }
+    </script>
+</head>
+<body>
+<button onclick="tinhTong()">Tính tổng các chữ số</button>
+</body>
+</html>
